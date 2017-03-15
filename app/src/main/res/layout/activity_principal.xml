@@ -53,10 +53,5 @@
             android:text="@string/saludar"
             android:onClick="saludar" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lblMensaje"
-            android:layout_weight="0.12" />
     </LinearLayout>
 </RelativeLayout>
