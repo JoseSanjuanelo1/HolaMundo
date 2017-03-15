@@ -16,5 +16,20 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"></LinearLayout>
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:text="@string/bienvenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSaludo"
+            android:textSize="30sp" />
+    </LinearLayout>
 </RelativeLayout>
