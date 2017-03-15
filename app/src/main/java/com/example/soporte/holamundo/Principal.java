@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
 
@@ -31,15 +32,37 @@ public class Principal extends AppCompatActivity {
     public void saludar(View v){
         String nom,apel;
         //Se toma el valor que la usuario ingreso tanto en nombra y apellida
-        nom= cajaNombre.getText().toString();
-        apel=cajaApellido.getText().toString();
-        //encapsula las valoras tomadas
-        b.putString("Nombre", nom);
-        b.putString("Apellido",apel);
+        if (validar()){
+            nom= cajaNombre.getText().toString();
+            apel=cajaApellido.getText().toString();
+            //encapsula las valoras tomadas
+            b.putString("Nombre", nom);
+            b.putString("Apellido",apel);
 
-        i.putExtras(b);
-        startActivity(i);
+            i.putExtras(b);
+            startActivity(i);
+        }
+
+
     }
+
+    public boolean validar(){
+
+        if (cajaNombre.getText().toString().isEmpty()){
+            cajaNombre.setError("Digite el nombre");
+            //Toast.makeText(getApplicationContext(),"Digite por favor el nombre",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (cajaApellido.getText().toString().isEmpty()){
+            cajaNombre.setError("Digite el apellido");
+            //Toast.makeText(getApplicationContext(),"Digite por favor el apellido",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
+
 }
 
 
