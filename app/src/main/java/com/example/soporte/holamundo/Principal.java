@@ -49,13 +49,13 @@ public class Principal extends AppCompatActivity {
     public boolean validar(){
 
         if (cajaNombre.getText().toString().isEmpty()){
-            cajaNombre.setError("Digite el nombre");
+            cajaNombre.setError(getResources().getString(R.string.error_1));
             //Toast.makeText(getApplicationContext(),"Digite por favor el nombre",Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (cajaApellido.getText().toString().isEmpty()){
-            cajaNombre.setError("Digite el apellido");
+            cajaApellido.setError(getResources().getString(R.string.error_2));
             //Toast.makeText(getApplicationContext(),"Digite por favor el apellido",Toast.LENGTH_SHORT).show();
             return false;
         }

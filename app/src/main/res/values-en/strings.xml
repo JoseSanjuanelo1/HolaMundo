@@ -8,5 +8,7 @@
     <string name="apellido">Last name</string>
     <string name="bienvenido">Welcome</string>
     <string name="parte_saludo2">Welcome to this amazing app!!</string>
+    <string name="error_1">Type name</string>
+    <string name="error_2">Type last name</string>
 
 </resources>
