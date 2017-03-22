@@ -74,6 +74,14 @@ public class Principal extends AppCompatActivity {
 
     }
 
+    public void borrar(View v){
+        cajaNombre.setText("");
+        cajaNombre.requestFocus();
+        cajaApellido.setText("");
+        comboGenero.setSelection(0);
+        r1.setChecked(true);
+    }
+
     public boolean validar(){
 
         if (cajaNombre.getText().toString().isEmpty()){
