@@ -10,4 +10,10 @@
     <string name="error_">Type name</string>
     <string name="error_2">Escriba el apellido</string>
     <string name="error_1">Escriba el nombre</string>
+    <string name="genero">Genero</string>
+    <string name="estado_civil">Estado Civil</string>
+    <string name="soltero">Soltero(a)</string>
+    <string name="casado">Casado(a)</string>
+    <string name="divorciado">Divorciado(a)</string>
+    <string name="borrar">Borrar</string>
 </resources>
