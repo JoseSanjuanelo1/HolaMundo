@@ -9,7 +9,7 @@ public class Saludo extends AppCompatActivity {
 
     private TextView saludo;
     private Bundle b;
-    private String aux, nom, apell;
+    private String aux, nom, apell, genero, estado_civil;
     private Resources res;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,17 @@ public class Saludo extends AppCompatActivity {
         b = getIntent().getExtras();
         nom = b.getString("Nombre");
         apell = b.getString("Apellido");
+        genero = b.getString("Genero");
+        estado_civil = b.getString("Estado_civil");
+
         res = this.getResources();
 
         aux= res.getString(R.string.parte_saludo)+" "+nom+" "+apell+" "+res.getString(R.string.parte_saludo2);
+        aux = aux + "\n"+res.getString(R.string.datos);
+        aux = aux+"\n\n"+res.getString(R.string.nombre)+": "+nom;
+        aux = aux+"\n"+res.getString(R.string.apellido)+": "+apell;
+        aux = aux+"\n"+res.getString(R.string.genero)+": "+genero;
+        aux = aux+"\n"+res.getString(R.string.estado_civil)+": "+estado_civil;
         saludo.setText(aux);
 
 
